@@ -1,0 +1,140 @@
+{
+  "schemas": {
+    "ticket_schema": {
+      "tables": {
+        "users": {
+          "columns": [
+            {
+              "name": "employee_id",
+              "data_type": "character varying",
+              "is_primary_key": false,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            },
+            {
+              "name": "name",
+              "data_type": "character varying",
+              "is_primary_key": false,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            },
+            {
+              "name": "email",
+              "data_type": "character varying",
+              "is_primary_key": false,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            },
+            {
+              "name": "user_id",
+              "data_type": "integer",
+              "is_primary_key": true,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            }
+          ]
+        },
+        "tickets": {
+          "columns": [
+            {
+              "name": "user_id",
+              "data_type": "integer",
+              "is_primary_key": false,
+              "is_foreign_key": true,
+              "references": {
+                "schema": "ticket_schema",
+                "table": "users",
+                "column": "user_id"
+              },
+              "synonyms": []
+            },
+            {
+              "name": "subject",
+              "data_type": "text",
+              "is_primary_key": false,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            },
+            {
+              "name": "status",
+              "data_type": "character varying",
+              "is_primary_key": false,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            },
+            {
+              "name": "ticket_id",
+              "data_type": "integer",
+              "is_primary_key": true,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            },
+            {
+              "name": "priority",
+              "data_type": "character varying",
+              "is_primary_key": false,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            },
+            {
+              "name": "created_at",
+              "data_type": "timestamp without time zone",
+              "is_primary_key": false,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            }
+          ]
+        }
+      }
+    },
+    "policy_schema": {
+      "tables": {
+        "policies": {
+          "columns": [
+            {
+              "name": "policy_id",
+              "data_type": "integer",
+              "is_primary_key": true,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            },
+            {
+              "name": "policy_type",
+              "data_type": "character varying",
+              "is_primary_key": false,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            },
+            {
+              "name": "eligibility",
+              "data_type": "text",
+              "is_primary_key": false,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            },
+            {
+              "name": "description",
+              "data_type": "text",
+              "is_primary_key": false,
+              "is_foreign_key": false,
+              "references": null,
+              "synonyms": []
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ticket_schema.users",
+    "schema": "ticket_schema",
+    "table": "users",
+    "columns": [
+      "employee_id",
+      "name",
+      "email",
+      "user_id"
+    ],
+    "synonyms": [],
+    "ner_labels": [],
+    "embedding_index": 0
+  },
+  {
+    "id": "ticket_schema.tickets",
+    "schema": "ticket_schema",
+    "table": "tickets",
+    "columns": [
+      "user_id",
+      "subject",
+      "status",
+      "ticket_id",
+      "priority",
+      "created_at"
+    ],
+    "synonyms": [],
+    "ner_labels": [],
+    "embedding_index": 1
+  },
+  {
+    "id": "policy_schema.policies",
+    "schema": "policy_schema",
+    "table": "policies",
+    "columns": [
+      "policy_id",
+      "policy_type",
+      "eligibility",
+      "description"
+    ],
+    "synonyms": [],
+    "ner_labels": [],
+    "embedding_index": 2
+  }
+]

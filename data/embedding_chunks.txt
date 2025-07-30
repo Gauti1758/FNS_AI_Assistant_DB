@@ -1,0 +1,9 @@
+Schema: ticket_schema
+Table: users
+Columns: employee_id, name, email, user_id
+Schema: ticket_schema
+Table: tickets
+Columns: user_id, subject, status, ticket_id, priority, created_at
+Schema: policy_schema
+Table: policies
+Columns: policy_id, policy_type, eligibility, description
