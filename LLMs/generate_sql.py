@@ -3,7 +3,7 @@ import json
 import requests
 
 # OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-OPENROUTER_API_KEY = "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"    #need to move it to env
+OPENROUTER_API_KEY = ""    #need to move it to env
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "openai/gpt-3.5-turbo"  
 
